@@ -1,8 +1,9 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+export const Header = () => (
   <ul className="navbar">
     <li>
       <Link to="/" className="Logo booksButton">Bookstore CMS</Link>
@@ -16,5 +17,7 @@ const Header = () => {
     <li>
       <div className="Portrait">Portrait</div>
     </li>
-  </ul>;
-};
+  </ul>
+);
+
+Header.displayName = 'Header';
