@@ -1,8 +1,6 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/prefer-default-export */
 import { pushBook } from '../../redux/books/Book';
 
-export const Form = () => {
+const Form = () => {
   const submitBook = (e) => {
     e.preventDefault();
     const bookName = document.getElementById('book-title').value;
@@ -16,11 +14,16 @@ export const Form = () => {
     };
     pushBook(newBook);
   };
-
-    <form onSubmit={this.addBook}>
-      <input type="text" id="book-title" />
-      <input type="text" id="book-genre" />
-      <input type="text" id="book-author" />
+  return (
+    <form onSubmit={pushBook}>
+      <input placeholder="title" type="text" id="book-title" />
+      <input placeholder="genre" type="text" id="book-genre" />
+      <input placeholder="author" type="text" id="book-author" />
       <button onClick={submitBook} type="button">submit</button>
-    </form>;
+    </form>
+  );
 };
+
+Form.displayName = 'Form';
+
+export default Form;

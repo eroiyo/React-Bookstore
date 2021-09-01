@@ -1,10 +1,7 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Book = (props) => {
+const Book = (props) => {
   const {
     onClick, genre, title, author, id,
   } = props;
@@ -18,21 +15,22 @@ export const Book = (props) => {
   );
 };
 
-Book.displayName = 'Book';
-
-const propTypes = {
+Book.propTypes = {
+  id: PropTypes.number,
   genre: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
   onClick: PropTypes.func,
 };
 
-const defaultProps = {
-  id: '-1',
+Book.displayName = 'Book';
+
+Book.defaultProps = {
+  id: -1,
   title: 'A Python Hello World',
   genre: 'Education',
   author: 'Arturo Ortega',
   onClick: () => {},
 };
 
-PropTypes.checkPropTypes(propTypes, defaultProps, 'prop', 'Book');
+export default Book;

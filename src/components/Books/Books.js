@@ -1,10 +1,8 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import BookManager, { deleteBook } from '../../redux/books/Book';
-import { Book } from './Book';
+import Book from './Book';
 
-export const Books = () => {
+const Books = () => {
   const normal = BookManager('GET');
   return (
     <ul className="booklist">
@@ -21,3 +19,7 @@ export const Books = () => {
     </ul>
   );
 };
+
+Books.displayName = 'Books';
+
+export default Books;
