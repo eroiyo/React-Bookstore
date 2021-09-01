@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Book from './Book';
 import { useSelector } from 'react-redux';
+import Book from './Book';
 
 const Books = (props) => {
   const { books } = props;
@@ -9,7 +9,9 @@ const Books = (props) => {
   return (
     <div>
       <h2>
-        Number of books {bookQuantity}
+        Number of books
+        {' '}
+        {bookQuantity}
       </h2>
       <ul className="booklist">
         {books.map((book) => {
@@ -28,7 +30,11 @@ const Books = (props) => {
 };
 
 Books.propTypes = {
-  books: PropTypes.array,
+  books: PropTypes.arrayOf(PropTypes.object),
+};
+
+Books.defaultProps = {
+  books: [{}],
 };
 
 Books.displayName = 'Books';

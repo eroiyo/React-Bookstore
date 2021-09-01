@@ -20,13 +20,15 @@ export const getBooks = () => ({
 });
 
 const reducer = (state = initState, action = { type: 'error' }) => {
+  let newState;
+  let books;
   switch (action.type) {
     case PUSH_BOOK:
       state.books.push(action.extraBook);
       return state;
     case DELETE_BOOK:
-      const books = state.books.filter((book) => book.id !== action.id);
-      const newState = { books };
+      books = state.books.filter((book) => book.id !== action.id);
+      newState = { books };
       return newState;
     case GET:
       return state;
