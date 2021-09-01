@@ -1,8 +1,9 @@
 import { pushBook } from '../../redux/books/Book';
+import { useDispatch } from 'react-redux';
 
 const Form = () => {
+  const dispatch = useDispatch();
   const submitBook = (e) => {
-    e.preventDefault();
     const bookName = document.getElementById('book-title').value;
     const bookAuthor = document.getElementById('book-author').value;
     const bookGenre = document.getElementById('book-genre').value;
@@ -12,14 +13,15 @@ const Form = () => {
       title: bookName,
       author: bookAuthor,
     };
-    pushBook(newBook);
+    dispatch(pushBook(newBook));
+    e.preventDefault();
   };
   return (
-    <form onSubmit={pushBook}>
+    <form onSubmit={submitBook}>
       <input placeholder="title" type="text" id="book-title" />
       <input placeholder="genre" type="text" id="book-genre" />
       <input placeholder="author" type="text" id="book-author" />
-      <button onClick={submitBook} type="button">submit</button>
+      <button type="submit">submit</button>
     </form>
   );
 };
