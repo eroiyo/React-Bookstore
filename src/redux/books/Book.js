@@ -20,7 +20,6 @@ export const getBooks = () => ({
 });
 
 const reducer = (state = initState, action = { type: 'error' }) => {
-  let newState;
   let books;
   switch (action.type) {
     case PUSH_BOOK:

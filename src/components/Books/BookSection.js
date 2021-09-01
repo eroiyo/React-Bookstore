@@ -7,7 +7,7 @@ const BooksPage = () => {
 
   return (
     <div>
-      <Books books={books}/>
+      <Books books={books} />
       <Form />
     </div>
   );

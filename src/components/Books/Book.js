@@ -7,7 +7,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
   const forClick = (id) => {
     dispatch(deleteBook(id));
-  }
+  };
   const {
     genre, title, author, id,
   } = props;

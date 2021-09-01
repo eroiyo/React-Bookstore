@@ -1,12 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const Books = () => {
   const bookQuantity = useSelector((state) => state.books.length);
   const books = useSelector((state) => state.books);
-  console.log(books);
   return (
     <div>
       <h2>
