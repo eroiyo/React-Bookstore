@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Book from './Book';
 
-const Books = (props) => {
-  const { books } = props;
+const Books = () => {
   const bookQuantity = useSelector((state) => state.books.length);
+  const books = useSelector((state) => state.books);
+  console.log(books);
   return (
     <div>
       <h2>
@@ -27,14 +28,6 @@ const Books = (props) => {
       </ul>
     </div>
   );
-};
-
-Books.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.object),
-};
-
-Books.defaultProps = {
-  books: [{}],
 };
 
 Books.displayName = 'Books';
