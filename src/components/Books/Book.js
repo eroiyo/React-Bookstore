@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { deleteBook } from '../../redux/books/Book';
 
 const Book = (props) => {
+  const dispatch = useDispatch();
+  const forClick = (id) => {
+    dispatch(deleteBook(id));
+  };
   const {
-    onClick, genre, title, author, id,
+    genre, title, author, id,
   } = props;
   return (
     <div className="square">
       <p className="genre">{genre}</p>
       <h2 className="title">{title}</h2>
       <p className="author">{author}</p>
-      <button type="button" onClick={() => onClick(id)}>delete</button>
+      <button type="button" onClick={() => (forClick(id))}>delete</button>
     </div>
   );
 };
@@ -20,7 +26,6 @@ Book.propTypes = {
   genre: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 Book.displayName = 'Book';
@@ -30,7 +35,6 @@ Book.defaultProps = {
   title: 'A Python Hello World',
   genre: 'Education',
   author: 'Arturo Ortega',
-  onClick: () => {},
 };
 
 export default Book;
