@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { pushBook } from '../../redux/books/Book';
+import { apiAdd } from '../../Api';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -12,13 +13,14 @@ const Form = () => {
   const changeAuthor = (e) => setAuthor(e.target.value);
   const changeGenre = (e) => setGenre(e.target.value);
 
-  const submitBook = (e) => {
+  const submitBook = async (e) => {
     const newBook = {
       id: Date.now(),
       genre,
       title,
-      author,
+      author: "Comming Soon",
     };
+    await apiAdd(title, genre, newBook.id);
     dispatch(pushBook(newBook));
     e.preventDefault();
   };
