@@ -1,16 +1,17 @@
 # React Boilerplate
 
-> An Template to use in future projects using React
+> An Bookstore using React, Redux, and the Bookstore API
 
-![image](https://user-images.githubusercontent.com/59938389/129577987-74cc896a-c99e-4ede-b21d-baa589bb82f7.png)
+![image](https://user-images.githubusercontent.com/59938389/132069508-a04cc26d-06da-44f3-9fba-c450c373757a.png)
 
-Additional description about the project and its features.
+The bookstore let you save Books, that information include Titles and and genres, some other features will coming soon, like the ability to save the progress of the book you are reading, or publish by author name
 
 ## Built With
 
 -React
 -Javascript
 -HTML
+-Redux
 ## Getting Started
 
 
@@ -30,7 +31,7 @@ Unzip the files and leave them all in the same folder
 👤 **Arturo Ortega**
 
 - GitHub: [@eroiyo](https://github.com/eroiyo)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-arturo-ortega-guanipa-39a1a5204/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-arturo-ortega-guanipa)
 
 ### Usage
 
