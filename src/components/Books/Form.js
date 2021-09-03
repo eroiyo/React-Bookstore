@@ -18,7 +18,7 @@ const Form = () => {
       id: Date.now(),
       genre,
       title,
-      author: 'Comming Soon',
+      author: 'Coming Soon',
     };
     e.preventDefault();
     dispatch(pushBook(newBook));
