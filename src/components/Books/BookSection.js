@@ -1,16 +1,11 @@
-import { useSelector } from 'react-redux';
 import Books from './Books';
 import Form from './Form';
 
-const BooksPage = () => {
-  const books = useSelector((state) => state);
-
-  return (
-    <div>
-      <Books books={books} />
-      <Form />
-    </div>
-  );
-};
+const BooksPage = () => (
+  <div>
+    <Books />
+    <Form />
+  </div>
+);
 
 export default BooksPage;

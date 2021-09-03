@@ -1,26 +1,28 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { pushBook } from '../../redux/books/Book';
+import { apiAdd } from '../../Api';
 
 const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [author, setAuthor] = useState('Comming Soon');
   const [genre, setGenre] = useState('');
 
   const changeTitle = (e) => setTitle(e.target.value);
-  const changeAuthor = (e) => setAuthor(e.target.value);
+  const changeAuthor = () => setAuthor(author);
   const changeGenre = (e) => setGenre(e.target.value);
 
-  const submitBook = (e) => {
+  const submitBook = async (e) => {
     const newBook = {
       id: Date.now(),
       genre,
       title,
-      author,
+      author: 'Coming Soon',
     };
-    dispatch(pushBook(newBook));
     e.preventDefault();
+    dispatch(pushBook(newBook));
+    await apiAdd(title, genre, newBook.id);
   };
   return (
     <form onSubmit={submitBook}>
