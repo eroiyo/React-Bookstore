@@ -11,7 +11,7 @@ export const fetchBooks = async () => {
   const buffertwo = Object.keys((response.data));
   const result = [];
   buffer.forEach((arr, index) => {
-    result.push({...arr[0], ...{id: buffertwo[index]}});
+    result.push({ ...arr[0], ...{ id: buffertwo[index] } });
   });
   console.log(response.data);
   return result;
@@ -31,10 +31,6 @@ export const apiAdd = async (title, genre, id) => {
 
 export const apiDelete = async (id) => {
   const newURL = `${baseURL}/${id}`;
-  const requestObject = {
-    item_id: id,
-  };
-
   const response = await axios({
     method: 'DELETE',
     url: newURL,

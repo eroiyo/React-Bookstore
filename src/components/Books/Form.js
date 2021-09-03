@@ -6,11 +6,11 @@ import { apiAdd } from '../../Api';
 const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [author, setAuthor] = useState('Comming Soon');
   const [genre, setGenre] = useState('');
 
   const changeTitle = (e) => setTitle(e.target.value);
-  const changeAuthor = (e) => setAuthor(e.target.value);
+  const changeAuthor = () => setAuthor(author);
   const changeGenre = (e) => setGenre(e.target.value);
 
   const submitBook = async (e) => {
@@ -18,7 +18,7 @@ const Form = () => {
       id: Date.now(),
       genre,
       title,
-      author: "Comming Soon",
+      author: 'Comming Soon',
     };
     e.preventDefault();
     dispatch(pushBook(newBook));

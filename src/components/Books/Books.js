@@ -27,7 +27,7 @@ const Books = () => {
           } = book;
           return (
             <li key={book.id}>
-              <Book id={id} title={title} genre={category} author="Comming Soon" />
+              <Book id={id} title={title} genre={category} author={author} />
             </li>
           );
         })}

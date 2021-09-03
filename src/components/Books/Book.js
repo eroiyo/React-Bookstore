@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { deleteBook } from '../../redux/books/Book';
 import { apiDelete } from '../../Api';
 
-
 const Book = (props) => {
   const dispatch = useDispatch();
   const forClick = async (id) => {
