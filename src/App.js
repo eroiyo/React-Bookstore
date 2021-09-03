@@ -5,13 +5,15 @@ import BookSection from './components/Books/BookSection';
 
 const App = () => (
   <Router>
-    <Header />
-    <Switch>
-      <Route path="/" exact key="/">
-        <BookSection />
-      </Route>
-      <Route path="/categories" exact key="/categories"><Categories /></Route>
-    </Switch>
+    <div className="panel">
+      <Header />
+      <Switch>
+        <Route path="/" exact key="/">
+          <BookSection />
+        </Route>
+        <Route path="/categories" exact key="/categories"><Categories /></Route>
+      </Switch>
+    </div>
   </Router>
 );
 
