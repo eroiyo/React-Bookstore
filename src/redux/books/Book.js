@@ -1,9 +1,7 @@
 /* eslint-disable linebreak-style */
-
 const PUSH_BOOK = 'bookStore/books/PUSH_BOOK';
 const DELETE_BOOK = 'bookStore/books/DELETE_BOOK';
 const GET = 'bookStore/books/GET';
-const SET = 'bookStore/books/SET';
 
 const initState = [];
 
@@ -21,10 +19,6 @@ export const getBooks = () => ({
   type: GET,
 });
 
-export const setBooks = (books) => ({
-  type: SET,
-  books,
-});
 const reducer = (state = initState, action = { type: 'error' }) => {
   let books;
   switch (action.type) {
@@ -36,8 +30,6 @@ const reducer = (state = initState, action = { type: 'error' }) => {
       return books;
     case GET:
       return state;
-    case SET:
-      return action.books;
     default:
       return state;
   }

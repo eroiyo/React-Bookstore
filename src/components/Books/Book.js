@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../../redux/books/Book';
-import { apiDelete } from '../../Api';
 
 const Book = (props) => {
   const dispatch = useDispatch();
-  const forClick = async (id) => {
+  const forClick = (id) => {
     dispatch(deleteBook(id));
-    await apiDelete(id);
   };
   const {
     genre, title, author, id,
@@ -33,7 +31,7 @@ Book.propTypes = {
 Book.displayName = 'Book';
 
 Book.defaultProps = {
-  id: '-1',
+  id: -1,
   title: 'A Python Hello World',
   genre: 'Education',
   author: 'Arturo Ortega',
