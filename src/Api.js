@@ -34,7 +34,14 @@ export const apiDelete = async (id) => {
   const requestObject = {
     item_id: id,
   };
-  const response = await axios.post(newURL, requestObject, DELETE).catch((err) => {
+
+  const response = await axios({
+    method: 'DELETE',
+    url: newURL,
+    data: {
+      item_id: id,
+    },
+  }).catch((err) => {
     console.log('Error', err);
   });
   return (response.data);

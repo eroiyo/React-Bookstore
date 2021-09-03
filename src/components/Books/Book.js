@@ -8,8 +8,8 @@ import { apiDelete } from '../../Api';
 const Book = (props) => {
   const dispatch = useDispatch();
   const forClick = async (id) => {
-    await apiDelete(id);
     dispatch(deleteBook(id));
+    await apiDelete(id);
   };
   const {
     genre, title, author, id,

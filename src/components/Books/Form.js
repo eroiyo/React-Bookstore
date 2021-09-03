@@ -20,9 +20,9 @@ const Form = () => {
       title,
       author: "Comming Soon",
     };
-    await apiAdd(title, genre, newBook.id);
-    dispatch(pushBook(newBook));
     e.preventDefault();
+    dispatch(pushBook(newBook));
+    await apiAdd(title, genre, newBook.id);
   };
   return (
     <form onSubmit={submitBook}>
