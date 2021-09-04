@@ -48,7 +48,7 @@ li {
   width: 0.125rem;
   height: 5.375rem;
   background-color: #e8e8e8;
-  margin-left: 10%;
+  margin-left: 15%;
   margin-right: 10%;
   margin-top: 2.5%;
 }
@@ -76,10 +76,14 @@ header {
 .navbar {
   display: flex;
   flex-direction: row;
-  padding: 24px 4%;
+  padding: 20px 4%;
   background-color: white;
   align-items: center;
   gap: 40px;
+}
+
+.categoriesButton {
+  opacity: 0.5
 }
 
 a {
@@ -171,7 +175,7 @@ a {
 }
 
 .square {
-  width: 50%;
+  width: 45%;
   margin-left: 2.5%;
   height: 80%;
   margin-top: 40px;
@@ -195,7 +199,7 @@ a {
 
 .progress-text {
   margin-top: 5%;
-  margin-left: 50%;
+  margin-left: 60%;
   font-family: "Montserrat", sans-serif;
   color: #121212;
 }
