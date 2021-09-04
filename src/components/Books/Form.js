@@ -22,14 +22,16 @@ const Form = () => {
     };
     e.preventDefault();
     dispatch(pushBook(newBook));
+    document.getElementById('form').reset();
     await apiAdd(title, genre, newBook.id);
   };
   return (
-    <form onSubmit={submitBook}>
+    <form id="form" onSubmit={submitBook}>
       <div className="xdivisor" />
       <h2 className="form-title">ADD NEW BOOK</h2>
-      <input placeholder="Book Title" className="input" onChange={changeTitle} type="text" id="book-title" />
-      <select className="input genre-categorys" onChange={changeGenre} id="book-genre">
+      <input required placeholder="Book Title" className="input" onChange={changeTitle} type="text" id="book-title" />
+      <select required className="input genre-categorys" onChange={changeGenre} placeholder="Category" id="book-genre">
+        <option value="" disabled selected hidden>Category</option>
         <option value="Action">Action</option>
         <option value="Horror">Horror</option>
         <option value="Science Fiction">Science Fiction</option>
