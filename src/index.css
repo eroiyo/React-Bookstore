@@ -10,7 +10,6 @@ body {
   background-color: #f5f6fa;
 }
 
-
 menu,
 ol,
 ul,
@@ -90,7 +89,7 @@ header {
 }
 
 .categoriesButton {
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 a {
@@ -260,7 +259,7 @@ form {
 }
 
 .input {
-  font-family: "Montserrat",sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 45%;
   padding: 10px 5px;
   border-radius: 5px;
@@ -276,11 +275,11 @@ form {
   margin-right: 0%;
 }
 
-.genre-categorys:invalid{
+.genre-categorys:invalid {
   opacity: 0.5;
 }
 
-.genre-categorys[target=no]{
+.genre-categorys[target=no] {
   opacity: 0.5;
 }
 
