@@ -67,6 +67,11 @@ header {
   margin-bottom: 50px;
   align-items: center;
   align-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
+  align-items: center;
 }
 
 .navbar {
@@ -74,7 +79,6 @@ header {
   flex-direction: row;
   padding: 24px 4%;
   background-color: white;
-  border-bottom: solid 1px #e8e8e8;
   align-items: center;
   gap: 40px;
 }
@@ -97,6 +101,20 @@ a {
   letter-spacing: 1.9px;
   color: var(--black-two);
   font-weight: 400;
+}
+
+.portrait {
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  margin-left: 35%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+}
+
+.user {
+  color: #0290ff;
 }
 
 .author,

@@ -13,10 +13,10 @@ const Header = () => (
       <li>
         <Link to="/categories" className="navLink categoriesButton">CATEGORIES</Link>
       </li>
-      <li>
-        <div className="Portrait">Portrait</div>
-      </li>
     </ul>
+    <button className="portrait" type="button">
+      <i className="fa fa-user user" aria-hidden="true" />
+    </button>
   </header>
 );
 
