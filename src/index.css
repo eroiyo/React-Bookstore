@@ -71,7 +71,6 @@ header {
   flex-direction: row;
   background-color: white;
   border-bottom: solid 1px #e8e8e8;
-  align-items: center;
 }
 
 .navbar {
