@@ -14,12 +14,7 @@ const Books = () => {
     dispatch(setBooks(result));
   }, []);
   return (
-    <div>
-      <h2>
-        Number of books
-        {' '}
-        {bookQuantity}
-      </h2>
+    <div numbooks={bookQuantity}>
       <ul className="booklist">
         {books.map((book) => {
           const {
