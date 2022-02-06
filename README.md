@@ -1,4 +1,4 @@
-# React Boilerplate
+# React Bookstore
 
 > An Bookstore using React, Redux, and the Bookstore API
 
